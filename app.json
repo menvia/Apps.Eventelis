@@ -1,0 +1,15 @@
+{
+    "id": "6b0dacb2-c15b-46a6-b675-24febc447e3b",
+    "version": "0.0.1",
+    "requiredApiVersion": "^0.9.13",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "Eventelis",
+        "homepage": "www.eventelis.com",
+        "support": "support.eventelis.com"
+    },
+    "name": "Eventelis",
+    "nameSlug": "eventelis",
+    "classFile": "EventelisApp.ts",
+    "description": "Event Management Platform integration to enable Rocket.Chat users to stay tuned with event content."
+}
