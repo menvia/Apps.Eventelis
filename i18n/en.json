@@ -1,3 +1,12 @@
 {
-    "key": "Eventelis API Key"
+    "EVENTELIS_COMMAND_DESCRIPTION": "Search event sessions",
+    "EVENTELIS_COMMAND_PARAMS": "",
+    "EVENT_ID_DESCRIPTION": "Get the event ID on the Eventelis dashboard on your event details.",
+    "EVENT_ID_LABEL": "Event ID",
+    "KEY_DESCRIPTION": "Contact Eventelis support to get your API key.",
+    "KEY_LABEL": "Eventelis API Key",
+    "USER_ALIAS_DESCRIPTION": "The username alias that will be shown in the messages sent by this app",
+    "USER_ALIAS_LABEL": "Username Alias",
+    "USER_AVATAR_DESCRIPTION": "The user avatar that will be shown in the messages sent by this app",
+    "USER_AVATAR_LABEL": "Avatar"
 }
