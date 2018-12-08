@@ -1,9 +1,13 @@
 # Apps.Eventelis
-Rocket.Chat Eventelis App
 
-This App is meant to integrate Eventelis with Rocket.Chat.
+Rocket.Chat Eventelis App. This app provides the `/eventelis` slashcommand to query event information.
+
+You can use `/eventelis search <keyword>` to search for sessions.
+
+You can also use `/eventelis help` to see a list of all available commands.
 
 ## Development Quick Start
+
 Make sure you have https://github.com/RocketChat/Rocket.Chat.Apps-cli installed.
 
 `npm install -g @rocket.chat/apps-cli`
