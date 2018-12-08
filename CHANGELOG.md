@@ -1,3 +1,7 @@
+## 0.0.3 / 2018.12.08
+- Hotfix to show the help command
+- Fix to sort sessions by schedule
+
 ## 0.0.2 / 2018.12.08
 - Add CHANGELOG.md and README.md
 - Add support to run commands in portuguese, english and spanish

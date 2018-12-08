@@ -32,7 +32,7 @@ export class EventelisSlashCommand implements ISlashCommand {
             return this.processHelpCommand(context, read, modify);
         }
 
-        if ('search') {
+        if (command === 'search') {
             this.processSessionsCommand(context, query.join(' '), read, modify, http, persis);
         } else {
             this.processHelpCommand(context, read, modify);
@@ -80,6 +80,7 @@ export class EventelisSlashCommand implements ISlashCommand {
         this.postMessage(message, context, read, modify);
 
         // Search for sessions on Eventelis
+        // TODO: Check internet connection
         const data = await sdk.getSessions(http, read, query);
 
         // Check if any session was found
@@ -93,9 +94,20 @@ export class EventelisSlashCommand implements ISlashCommand {
                 message += `For a better experience we will limit your search results in 10 sessions.\n`;
             }
 
+            // Filter only sessions that are scheduled
+            // TODO: Show multiple schedules
+            const scheduledSessions = data.filter((session) => session.schedules && session.schedules.length > 0 && session.schedules[0].start);
+
+            // Sort by start date
+            scheduledSessions.sort((a, b) => {
+                const aStart = a.schedules[0].start;
+                const bStart = b.schedules[0].start;
+                return (aStart > bStart) ? 1 : ((bStart > aStart) ? -1 : 0);
+            });
+
             // Build message with the resulting sessions
-            data.forEach((session, $index) => {
-                if ($index < 10 && session.schedules && session.schedules.length > 0 && session.schedules[0].start) {
+            scheduledSessions.forEach((session, $index) => {
+                if ($index < 10) {
                     const dateTime = session.schedules[0].start.toLocaleString().split('T');
                     const date = dateTime[0].split('-');
                     const time = dateTime[1].split(':');
