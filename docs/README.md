@@ -10,7 +10,7 @@ You can also use `/eventelis help` to see a list of all available commands.
 
 ## Configuration
 
-To start using the App enter your *Eventelis API Key* and the *Event ID* of the event to made available through the slashcommand.
+To start using the App, enter your *Eventelis API Key* and the *Event ID* of the event to make it available through the slashcommand.
 
 ![how to configure the eventelis slashcommand](configuration.jpeg?raw=true "how to configure the eventelis slashcommand")
 
