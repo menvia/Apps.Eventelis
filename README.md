@@ -1,6 +1,8 @@
 # Apps.Eventelis
 Rocket.Chat Eventelis App
 
+This App is meant to integrate Eventelis with Rocket.Chat.
+
 ## Development Quick Start
 Make sure you have https://github.com/RocketChat/Rocket.Chat.Apps-cli installed.
 
@@ -8,8 +10,8 @@ Make sure you have https://github.com/RocketChat/Rocket.Chat.Apps-cli installed.
 
 Checkout this repo and install dependencies
 ```bash
-git clone https://github.com/RocketChat/Apps.Cloudflare.git
-cd Apps.Cloudflare
+git clone https://github.com/menvia/Apps.Eventelis.git
+cd Apps.Eventelis
 npm install
 ```
 
