@@ -8,6 +8,12 @@ You can use `/eventelis search <keyword>` to search for sessions.
 
 You can also use `/eventelis help` to see a list of all available commands.
 
+## Configuration
+
+To start using the App enter your *Eventelis API Key* and the *Event ID* of the event to made available through the slashcommand.
+
+![how to configure the eventelis slashcommand](configuration.jpeg?raw=true "how to configure the eventelis slashcommand")
+
 ## Development Quick Start
 
 Make sure you have https://github.com/RocketChat/Rocket.Chat.Apps-cli installed.
