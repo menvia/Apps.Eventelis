@@ -4,6 +4,8 @@ Rocket.Chat Eventelis App. This app provides the `/eventelis` slashcommand to qu
 
 You can use `/eventelis search <keyword>` to search for sessions.
 
+![how to use the eventelis slashcommand](usage.gif?raw=true "how to use the eventelis slashcommand")
+
 You can also use `/eventelis help` to see a list of all available commands.
 
 ## Development Quick Start
