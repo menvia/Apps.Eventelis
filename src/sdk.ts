@@ -1,28 +1,12 @@
 import { IHttp, IHttpRequest, IRead } from '@rocket.chat/apps-engine/definition/accessors';
-
-export interface ISchedule {
-    _id: string;
-    start: Date;
-    end: Date;
-    track: string;
-    order: number;
-    location: string;
-}
-
-export interface ISession {
-    _id: string;
-    app: string;
-    ext_id: string;
-    desc: string;
-    event: string;
-    removed: boolean;
-    schedules: Array<ISchedule>;
-    speakers: Array<string>;
-    title: string;
-    id: string;
-}
+import { App } from '@rocket.chat/apps-engine/definition/App';
+import { ISession } from './interfaces';
 
 class SDK {
+    private app: App;
+    public setApp(app: App): any {
+        this.app = app;
+    }
     public async getSessions(http: IHttp, read: IRead, query: string) {
         const url = 'https://frl.io/event/session';
 
@@ -49,7 +33,7 @@ class SDK {
         return {
             'Authorization': authKeySetting,
             'Content-Type': 'application/json',
-            'X-Client-Version': 'Farol/0.0.1/javascript/rocketchat',
+            'X-Client-Version': `Farol/${this.app.getVersion()}/javascript/rocketchat`,
         };
     }
 
