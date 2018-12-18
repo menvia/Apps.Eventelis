@@ -43,7 +43,7 @@ export class EventelisSlashCommand implements ISlashCommand {
         const sender = await read.getUserReader().getById('rocket.cat');
         const room = context.getRoom();
 
-        const msg = await startNewMessageWithDefaultSenderConfig(modify, read, sender, room);
+        const msg = await startNewMessageWithDefaultSenderConfig(modify, read, sender, room, true);
         const text =
             `These are the commands I can understand:
             \`/eventelis search {{query}} \` search sessions...
@@ -55,9 +55,9 @@ export class EventelisSlashCommand implements ISlashCommand {
     }
 
     private async postMessage(message: string, context: SlashCommandContext, read: IRead, modify: IModify) {
-            const sender = await read.getUserReader().getById('rocket.cat');
+            const sender = await context.getSender();
             const room = context.getRoom();
-            const msg = await startNewMessageWithDefaultSenderConfig(modify, read, sender, room);
+            const msg = await startNewMessageWithDefaultSenderConfig(modify, read, sender, room, false);
             msg.setText(message);
             modify.getCreator().finish(msg);
     }

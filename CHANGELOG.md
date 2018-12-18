@@ -1,3 +1,6 @@
+## 0.0.4 / 2018.12.17
+- Show results with the own user
+
 ## 0.0.3 / 2018.12.08
 - Hotfix to show the help command
 - Fix to sort sessions by schedule
