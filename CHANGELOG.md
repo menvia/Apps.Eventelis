@@ -1,3 +1,6 @@
+## 0.0.5 / 2018.12.20
+- Add version to help command output
+
 ## 0.0.4 / 2018.12.17
 - Show results with the own user
 

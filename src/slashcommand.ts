@@ -14,12 +14,14 @@ export class EventelisSlashCommand implements ISlashCommand {
     public i18nParamsExample = 'EVENTELIS_COMMAND_PARAMS';
     public i18nDescription = 'EVENTELIS_COMMAND_DESCRIPTION';
     public providesPreview = false;
+    private eventelisApp: App;
 
     /**
      * Constructor
      * @param app
      */
     constructor(private readonly app: App) {
+        this.eventelisApp = app;
         sdk.setApp(app);
      }
 
@@ -45,7 +47,10 @@ export class EventelisSlashCommand implements ISlashCommand {
 
         const msg = await startNewMessageWithDefaultSenderConfig(modify, read, sender, room, true);
         const text =
-            `These are the commands I can understand:
+            `I'm **Eventelis bot**. (version ${this.eventelisApp.getVersion()})
+
+            These are the commands I can understand:
+
             \`/eventelis search {{query}} \` search sessions...
             \`/eventelis help\` Shows this message`;
 
